@@ -67,13 +67,18 @@ megaFriend
 function megaFriend(name) {
     var max = 0;
     var highest; //------->highest will store big name
-
-    for (var i = 0; i < name.length; i++) {
-        if (name[i].length > max) {
-            max = name[i].length;
-            highest = name[i];
+    if (name.length == 0) {
+        highest = "Invalid name";
+    }
+    else {
+        for (var i = 0; i < name.length; i++) {
+            if (name[i].length > max) {
+                max = name[i].length;
+                highest = name[i];
+            }
         }
     }
+
     return highest;
 }
 var name = ["Bulbul", "Jamal", "Jakaria", "Siblu", "Abul"];
