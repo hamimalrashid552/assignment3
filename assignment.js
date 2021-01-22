@@ -10,8 +10,9 @@ function kilometerToMeter(km) {
         return km * meter;
     }
 }
-
 console.log(kilometerToMeter(7));
+
+
 
 budgetCalculator
 
@@ -29,3 +30,31 @@ function budgetCalculator(watch, phone, laptop) {
     }
 }
 console.log(budgetCalculator(10, 5, 1));
+
+
+
+hotelCost
+
+function hotelCost(day) {
+    if (day < 1) {
+        return "Invalid number, please try again";
+    }
+    else if (day <= 10) {
+        var totalBill = day * 100;
+    }
+    else if (day <= 20) {
+        var first = 10 * 100;
+        var remainDay = day - 10;
+        var second = remainDay * 80;
+        var totalBill = first + second;
+    }
+    else {
+        var first = 10 * 100;
+        var second = 10 * 80;
+        var remainDay = day - 20;
+        var third = remainDay * 50;
+        var totalBill = first + second + third;
+    }
+    return totalBill;
+}
+console.log(hotelCost(43));
