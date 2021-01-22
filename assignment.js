@@ -1,6 +1,11 @@
-function kilometerToMeter(km){
+function kilometerToMeter(km) {
     var meter = 1000;
-    return km*meter;
+    if (km < 0) {
+        return "invalid number";
+    }
+    else {
+        return km * meter;
+    }
 }
-var result = kilometerToMeter(5);
+var result = kilometerToMeter(7);
 console.log(result);
