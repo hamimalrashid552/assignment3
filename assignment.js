@@ -1,3 +1,4 @@
+//https://github.com/hamimalrashid552/assignment3
 
 kilometerToMeter
 
@@ -43,14 +44,14 @@ function hotelCost(day) {
         var totalBill = day * 100;
     }
     else if (day <= 20) {
-        var first = 10 * 100;
+        var first = 10 * 100; //------------>here first is first ten days cost
         var remainDay = day - 10;
         var second = remainDay * 80;
         var totalBill = first + second;
     }
     else {
         var first = 10 * 100;
-        var second = 10 * 80;
+        var second = 10 * 80; //----------->here second is second ten days cost
         var remainDay = day - 20;
         var third = remainDay * 50;
         var totalBill = first + second + third;
@@ -58,3 +59,22 @@ function hotelCost(day) {
     return totalBill;
 }
 console.log(hotelCost(43));
+
+
+
+megaFriend
+
+function megaFriend(name) {
+    var max = 0;
+    var highest; //------->highest will store big name
+
+    for (var i = 0; i < name.length; i++) {
+        if (name[i].length > max) {
+            max = name[i].length;
+            highest = name[i];
+        }
+    }
+    return highest;
+}
+var name = ["Bulbul", "Jamal", "Jakaria", "Siblu", "Abul"];
+console.log(megaFriend(name));
